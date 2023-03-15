@@ -1,3 +1,5 @@
+import { corDeFundo, tabuleiro } from "./iniciar.js";
+
 export default () =>{
   const body = document.querySelector('body')
   const root = document.querySelector(':root')
@@ -18,4 +20,8 @@ export default () =>{
      root.style.setProperty("--cor-das-linhas", "#fafafa");
      body.dataset.tema = "red";
   }
+  corDeFundo.mudarCorDasCasas()
+  tabuleiro.forEach(
+    (casa) => (casa.style.backgroundColor = corDeFundo.value)
+    );
 }

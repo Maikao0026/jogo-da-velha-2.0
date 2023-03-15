@@ -10,12 +10,12 @@ import
   setPlayTime
 } from "./index.js";
 
+const corVitoria = {value: getComputedStyle(document.documentElement).getPropertyValue("--cor-vitoria")};
 const tabuleiro = document.querySelectorAll("div#tabuleiro>span");
 let placar = document.querySelector("p");
 let placarPlayer1 = 0;
 let placarPlayer2 = 0;
 let placarEmpates = 0;
-let empate;
 let h2 = document.querySelector("h2");
 
 const adicionarFuncoesAoTabuleiro = (event) => {
@@ -61,9 +61,10 @@ const verificarGanhador = () => {
   }
 
   if (list[4] == list[0] && list[4] == list[8]) {
-    tabuleiro[4].style.backgroundColor = "#007F4F";
-    tabuleiro[0].style.backgroundColor = "#007F4F";
-    tabuleiro[8].style.backgroundColor = "#007F4F";
+    for(let i = 0; i<=8;i+=4){
+      tabuleiro[i].style.backgroundColor = corVitoria.value
+    }
+  
     setGameOver(false);
     if (list[4] == player1.value) {
       setVencedor(player1.value)
@@ -73,9 +74,9 @@ const verificarGanhador = () => {
   }
 
   if (list[4] == list[2] && list[4] == list[6]) {
-    tabuleiro[4].style.backgroundColor = "#007F4F";
-    tabuleiro[2].style.backgroundColor = "#007F4F";
-    tabuleiro[6].style.backgroundColor = "#007F4F";
+   for(let i = 2; i <= 6; i+=2){
+    tabuleiro[i].style.backgroundColor = corVitoria.value;
+    }
     setGameOver(false)
     if (list[4] == player1.value) {
       setVencedor(player1.value)
@@ -85,9 +86,9 @@ const verificarGanhador = () => {
   }
 
   if (list[1] == list[4] && list[4] == list[7]) {
-    tabuleiro[1].style.backgroundColor = "#007F4F";
-    tabuleiro[4].style.backgroundColor = "#007F4F";
-    tabuleiro[7].style.backgroundColor = "#007F4F";
+    for(let i = 1; i<=7; i+=3){
+      tabuleiro[i].style.backgroundColor = corVitoria.value;
+    }
     setGameOver(false)
     if (list[4] == player1.value) {
       setVencedor(player1.value)
@@ -97,9 +98,9 @@ const verificarGanhador = () => {
   }
 
   if (list[4] == list[3] && list[4] == list[5]) {
-    tabuleiro[3].style.backgroundColor = "#007F4F";
-    tabuleiro[4].style.backgroundColor = "#007F4F";
-    tabuleiro[5].style.backgroundColor = "#007F4F";
+    for(let i =3; i<=5; i++){
+      tabuleiro[i].style.backgroundColor = corVitoria.value;
+    }
     setGameOver(false)
     if (list[4] == player1.value) {
       setVencedor(player1.value)
@@ -108,9 +109,9 @@ const verificarGanhador = () => {
     }
   }
   if (list[0] == list[1] && list[0] == list[2]) {
-    tabuleiro[0].style.backgroundColor = "#007F4F";
-    tabuleiro[1].style.backgroundColor = "#007F4F";
-    tabuleiro[2].style.backgroundColor = "#007F4F";
+    for(let i = 0; i<=2; i++){
+      tabuleiro[i].style.backgroundColor = corVitoria.value;
+    }
     setGameOver(false)
     if (list[0] == player1.value) {
       setVencedor(player1.value)
@@ -119,9 +120,9 @@ const verificarGanhador = () => {
     }
   }
   if (list[0] == list[3] && list[0] == list[6]) {
-    tabuleiro[0].style.backgroundColor = "#007F4F";
-    tabuleiro[3].style.backgroundColor = "#007F4F";
-    tabuleiro[6].style.backgroundColor = "#007F4F";
+    for(let i = 0; i<=6; i+=3){
+      tabuleiro[i].style.backgroundColor = corVitoria.value;
+    }
     setGameOver(false)
     if (list[0] == player1.value) {
       setVencedor(player1.value)
@@ -129,21 +130,21 @@ const verificarGanhador = () => {
       setVencedor(player2.value)
     }
   }
-  if (list[8] == list[5] && list[8] == list[2]) {
-    tabuleiro[2].style.backgroundColor = "#007F4F";
-    tabuleiro[5].style.backgroundColor = "#007F4F";
-    tabuleiro[8].style.backgroundColor = "#007F4F";
+  if (list[2] == list[5] && list[5] == list[8]) {
+   for(let i = 2; i<=8; i+=3){
+      tabuleiro[i].style.backgroundColor = corVitoria.value;
+    }
     setGameOver(false)
-    if (list[8] == player1.value.value) {
+    if (list[8] == player1.value) {
       setVencedor(player1.value)
     } else {
       setVencedor(player2.value)
     }
   }
   if (list[8] == list[7] && list[8] == list[6]) {
-    tabuleiro[6].style.backgroundColor = "#007F4F";
-    tabuleiro[7].style.backgroundColor = "#007F4F";
-    tabuleiro[8].style.backgroundColor = "#007F4F";
+    for(let i = 6; i<=8; i++){
+      tabuleiro[i].style.backgroundColor = corVitoria.value;
+    }
     setGameOver(false)
     if (list[8] == player1.value) {
       setVencedor(player1.value)

@@ -15,19 +15,21 @@ document.querySelectorAll("div#tabuleiro>span").forEach((element) => {
   element.addEventListener("click", adicionarFuncoesAoTabuleiro);
 });
 
-
 const setPlayTime = (newPlayTime) =>
 { 
  playTime.value = newPlayTime 
 }
+
 const setVencedor = (newVencedor) =>
 { 
  vencedor.value = newVencedor 
 }
+
 const setGameOver = (newGameOver) =>
 { 
   gameOver.value = newGameOver 
 }
+
 export
 {
   player1,
