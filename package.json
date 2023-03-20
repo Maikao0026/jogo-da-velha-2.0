@@ -1,0 +1,26 @@
+{
+  "name": "jogo-da-velha-2.0",
+  "version": "1.0.1",
+  "description": "Um jogo da velha, usando HTML, CSS e Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maikao0026/jogo-da-velha-2.0.git"
+  },
+  "author": "Michael Douglas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maikao0026/jogo-da-velha-2.0/issues"
+  },
+  "homepage": "https://github.com/Maikao0026/jogo-da-velha-2.0#readme",
+  "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
+    "webpack": "^5.76.2",
+    "webpack-cli": "^5.0.1"
+  }
+}
