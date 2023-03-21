@@ -1,0 +1,60 @@
+:root{
+  --cor-de-fundo: #100f10;
+  --cor-das-linhas: #FF0043;
+  --cor-das-letras: #fafafa;
+  --cor-vitoria:#007F4F;
+}
+
+header{
+  display: flex;
+}
+
+body{
+  background-color: var(--cor-de-fundo);
+  color: var(--cor-das-letras);
+}
+
+h1{
+  margin-left: 25%;
+}
+
+
+div#formulario{
+  border: solid 2px;
+  border-radius: 20px;
+  padding: 20px;
+  padding-right: 1px;
+  margin: auto 10em auto 10em;
+  min-width: 200px;
+}
+
+div#tabuleiro{
+  background-color: var(--cor-das-linhas);
+  display: none;
+  grid-template-columns: 6rem 6rem 6rem;
+  grid-template-rows: 6rem 6rem 6rem;
+  gap: .5rem;
+  max-width: 19rem;
+  margin-top: 3%;
+  margin-left: 25%;
+}
+
+div#tabuleiro span{
+  background-color: var(--cor-de-fundo);
+  cursor: pointer;
+  display: grid;
+  place-content: center; 
+  font-size: 5rem;
+}
+
+button.tema{
+  background-color: var(--cor-das-letras);
+  color: var(--cor-de-fundo);
+  border: none;
+  height: 20px;
+}
+button#reiniciar{
+  display: none;
+}
+
+

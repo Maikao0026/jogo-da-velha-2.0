@@ -1,3 +1,4 @@
+import '../style/style.css'
 import tema from "./tema.js";
 import { adicionarFuncoesAoTabuleiro} from "./funçõesDoJogo.js";
 import { iniciarPartida, reiniciarPartida } from "./iniciar.js";
